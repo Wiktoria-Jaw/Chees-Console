@@ -28,29 +28,14 @@ namespace Chess.Pieces
                 int newCol = Col + MoveDir[i, 1];
                 if (IsInsideBoard(newRow, newCol))
                 {
-                    if (HasMoved == false)
+                    if (board[newRow, newCol] == null)
                     {
-                        if (board[newRow, newCol] == null)
-                        {
-                            possMoves.Add((newRow, newCol));
-                        }
-                        else if (board[newRow, newCol].IsWhite != IsWhite)
-                        {
-                            possMoves.Add((newRow, newCol));
-                        }
+                        possMoves.Add((newRow, newCol));
                     }
-                    else
+                    else if (board[newRow, newCol].IsWhite != IsWhite)
                     {
-                        if (board[newRow, newCol] == null)
-                        {
-                            possMoves.Add((newRow, newCol));
-                        }
-                        else if (board[newRow, newCol].IsWhite != IsWhite)
-                        {
-                            possMoves.Add((newRow, newCol));
-                        }
+                        possMoves.Add((newRow, newCol));
                     }
-
                 }
             }
             return possMoves;
