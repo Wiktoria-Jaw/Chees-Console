@@ -56,7 +56,7 @@ namespace Chess.Pieces
             return possMoves;
         }
 
-        protected char GetSymbol()
+        public char GetSymbol()
         {
             if (IsWhite)
             {

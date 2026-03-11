@@ -8,7 +8,7 @@ namespace Chess.Pieces
 {
     class Knight : Piece
     {
-        public Knight(int row, int col, bool iswhite) : base(row, col, 's', iswhite, false, null)
+        public Knight(int row, int col, bool iswhite) : base(row, col, 'n', iswhite, false, null)
         {
             MoveDir = new int[,]
             {
