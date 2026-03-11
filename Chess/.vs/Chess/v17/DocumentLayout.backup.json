@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\rook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|c:\\users\\wiktoria\\desktop\\moje\\szkola\\klasa 4\\zarzadzanie projektem\\chess\\chess\\pieces\\king.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\king.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|c:\\users\\wiktoria\\desktop\\moje\\szkola\\klasa 4\\zarzadzanie projektem\\chess\\chess\\pieces\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "King.cs",
-              "DocumentMoniker": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\Pieces\\King.cs",
-              "RelativeDocumentMoniker": "Chess\\Pieces\\King.cs",
-              "ToolTip": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\Pieces\\King.cs",
-              "RelativeToolTip": "Chess\\Pieces\\King.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-11T10:22:46.225Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -49,14 +32,14 @@
               "RelativeDocumentMoniker": "Chess\\Pieces\\Rook.cs",
               "ToolTip": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\Pieces\\Rook.cs",
               "RelativeToolTip": "Chess\\Pieces\\Rook.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwC8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-11T10:21:49.102Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Piece.cs",
               "DocumentMoniker": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\Pieces\\Piece.cs",
               "RelativeDocumentMoniker": "Chess\\Pieces\\Piece.cs",
@@ -64,12 +47,11 @@
               "RelativeToolTip": "Chess\\Pieces\\Piece.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAjwCcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-10T13:55:51.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-10T13:55:51.892Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\Program.cs",
               "RelativeDocumentMoniker": "Chess\\Program.cs",
