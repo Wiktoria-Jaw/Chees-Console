@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chess.Pieces
+{
+    internal class King : Piece
+    {
+        public King(int row, int col, bool iswhite) : base(row, col, 'k', iswhite, false, null)
+        {
+            MoveDir = new int[,]
+            {
+                {-1,1},{0,1},{1,1},
+                {-1,0}, {1,0},
+                {-1,-1},{0,-1},{1,-1}
+            };
+        }
+
+        public override List<(int, int)> GetMoves(Piece[,] board)
+        {
+            List<(int, int)> possMoves = new List<(int, int)>();
+            for (int i = 0; i < MoveDir.GetLength(0); i++)
+            {
+                int newRow = Row + MoveDir[i, 0];
+                int newCol = Col + MoveDir[i, 1];
+                if (IsInsideBoard(newRow, newCol))
+                {
+                    if (HasMoved == false)
+                    {
+                        if (board[newRow, newCol] == null)
+                        {
+                            possMoves.Add((newRow, newCol));
+                        }
+                        else if (board[newRow, newCol].IsWhite != IsWhite)
+                        {
+                            possMoves.Add((newRow, newCol));
+                        }
+                    }
+                    else
+                    {
+                        if (board[newRow, newCol] == null)
+                        {
+                            possMoves.Add((newRow, newCol));
+                        }
+                        else if (board[newRow, newCol].IsWhite != IsWhite)
+                        {
+                            possMoves.Add((newRow, newCol));
+                        }
+                    }
+
+                }
+            }
+            return possMoves;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+# build files
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# user files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# logs
+*.log
+
+# temporary files
+*.tmp
+
+# Rider / JetBrains
+.idea/
+
+# VS Code
+.vscode/
+
+# system files
+.DS_Store
+Thumbs.db
