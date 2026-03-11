@@ -51,12 +51,79 @@ namespace Chess
                 Console.WriteLine("     -------------------------------");
             }
         }
+
+        public static string ToChessNotation(int row, int col)
+        {
+            int rowNum = 8 - row;
+            char colChar = (char)('A' + col);
+            return $"{colChar}{rowNum}";
+
+        }
+        public static bool ValidationSelectPiece(string pos, Piece[,] board, bool isWhiteTurn)
+        {
+            if (string.IsNullOrEmpty(pos) || pos.Length != 2) {
+                return false;
+            }
+
+            char colChar = char.ToUpper(pos[0]);
+            char rowChar = pos[1];
+
+            if (colChar <'A' || colChar>'H' || rowChar < '1' || rowChar > '8')
+            {
+                return false;
+            }
+
+            int col = colChar - 'A';
+            int row = 8 - (rowChar - '0');
+
+            Piece currPiece = board[row, col];
+
+            if (currPiece == null)
+            {
+                return false;
+            }
+
+            if (currPiece.IsWhite != isWhiteTurn)
+            {
+                return false;
+            }
+
+            if (currPiece.GetMoves(board).Count == 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        public static List<(int, int)> SelectPiece(string pos, Piece[,] board)
+        {
+            int row = 8 - (pos[1] - '0');
+            int col = char.ToUpper(pos[0])-'A';
+            Piece currPiece = board[row, col];
+            return board[row,col].GetMoves(board);
+        }
+
         public static void Main(string[] args)
         {
             Piece[,] Board = new Piece[8, 8];
             bool IsWhiteTurn = true;
             InitializeBoard(Board);
             PrintBoard(Board);
+            
+            Console.WriteLine("Turn: " + (IsWhiteTurn ? "White" : "Black") +"\nChoose your piece (ex. F5):");
+            string pos = Console.ReadLine();
+            while (!ValidationSelectPiece(pos, Board, IsWhiteTurn))
+            {
+                Console.WriteLine("Niepoprawny wybór, sprobuj ponownie.");
+                pos = Console.ReadLine();
+            }
+
+            List<(int,int)> moves = SelectPiece(pos, Board);
+            Console.WriteLine("Possible moves: ");
+            foreach(var move in moves)
+            {
+                Console.Write(ToChessNotation(move.Item1, move.Item2)+" ");
+            }
+            Console.WriteLine();
         }
     }
 }

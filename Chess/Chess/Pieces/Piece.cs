@@ -60,7 +60,7 @@ namespace Chess.Pieces
         {
             if (IsWhite)
             {
-                return  char.ToUpper(Symbol);
+                return char.ToUpper(Symbol);
             }
             else
             {

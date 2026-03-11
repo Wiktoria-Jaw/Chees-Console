@@ -16,7 +16,7 @@ namespace Chess.Pieces
         public override List<(int, int)> GetMoves(Piece[,] board)
         {
             List<(int, int)> possMoves = new List<(int, int)>();
-            int dir = IsWhite ? 1 : -1;
+            int dir = IsWhite ? -1 : 1;
             int newRow = Row + dir;
 
             if (newRow >= 0 && newRow < 8)
