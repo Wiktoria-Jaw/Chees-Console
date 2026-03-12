@@ -51,6 +51,8 @@ namespace Chess
                 Console.WriteLine("     -------------------------------");
             }
         }
+
+
         public static string ToChessNotation(int row, int col)
         {
             int rowNum = 8 - row;
@@ -58,6 +60,8 @@ namespace Chess
             return $"{colChar}{rowNum}";
 
         }
+
+
         public static bool ValidationSelectPiece(string pos, Piece[,] board, bool isWhiteTurn)
         {
             if (string.IsNullOrEmpty(pos) || pos.Length != 2) {
@@ -98,7 +102,7 @@ namespace Chess
             int row = 8 - (pos[1] - '0');
             int col = char.ToUpper(pos[0])-'A';
             Piece currPiece = board[row, col];
-            return board[row,col].GetMoves(board);
+            return currPiece.GetMoves(board);
         }
         public static void MovePiece(string pos, int rowNew, int colNew, Piece[,] board)
         {
@@ -112,6 +116,33 @@ namespace Chess
             currPiece.Col = colNew;
             currPiece.HasMoved = true;
         }
+        public static List<(int, int)> GetLegalMoves(Piece[,] board, Piece p, List<(int, int)> moves)
+        {
+            List<(int, int)> legalMoves = new List<(int, int)>();
+
+            foreach (var move in moves)
+            {
+                int newRow = move.Item1;
+                int newCol = move.Item2;
+
+                Piece[,] copyBoard = (Piece[,])board.Clone();
+
+                copyBoard[newRow, newCol] = copyBoard[p.Row, p.Col];
+                copyBoard[p.Row, p.Col] = null;
+
+                copyBoard[newRow, newCol].Row = newRow;
+                copyBoard[newRow, newCol].Col = newCol;
+
+                if (!IsCheck(p.IsWhite, copyBoard))
+                {
+                    legalMoves.Add(move);
+                }
+            }
+            return legalMoves;
+        }
+
+
+
         public static Piece FindKing(bool isWhiteTurn, Piece[,] board)
         {
             Piece king = null;
@@ -174,11 +205,33 @@ namespace Chess
             }
             return true;
         }
-        
-        //public static bool IsStalemate(bool isWhiteTurn, Piece[,] board)
-        //{
+        public static bool IsStalemate(bool isWhiteTurn, Piece[,] board)
+        {
+            if(IsCheck(isWhiteTurn, board)) return false;
 
-        //}
+            for(int r = 0; r < 8; r++)
+            {
+                for(int c = 0;c < 8; c++)
+                {
+                    Piece p = board[r,c];
+                    if(p!=null && p.IsWhite == isWhiteTurn)
+                    {
+                        var moves = p.GetMoves(board);
+                        var legalMoves = GetLegalMoves(board, p, moves);
+
+                        if(legalMoves.Count > 0)
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
+        
+
+
         public static void Main(string[] args)
         {
             Piece[,] Board = new Piece[8, 8];
@@ -197,9 +250,12 @@ namespace Chess
                     pos = Console.ReadLine();
                 }
 
-                List<(int, int)> moves = SelectPiece(pos, Board);
+                int row = 8 - (pos[1] - '0');
+                int col = char.ToUpper(pos[0]) - 'A';
+                Piece currPiece = Board[row, col];
+                List<(int, int)> filteredMoves = GetLegalMoves(Board, currPiece, SelectPiece(pos, Board));
                 Console.WriteLine("Possible moves: ");
-                foreach (var move in moves)
+                foreach (var move in filteredMoves)
                 {
                     Console.Write(ToChessNotation(move.Item1, move.Item2) + " ");
                 }
@@ -209,24 +265,22 @@ namespace Chess
                 while (chosenMove.Length != 2)
                 {
                     Console.WriteLine("Invalid choice, try again. You need to type exacly in a way its displayed (ex. A2)");
+                    chosenMove = Console.ReadLine();
                 }
 
                 int choseRow = 8 - (chosenMove[1] - '0');
                 int choseCol = char.ToUpper(chosenMove[0]) - 'A';
-                while (!moves.Contains((choseRow, choseCol)))
+                while (!filteredMoves.Contains((choseRow, choseCol)))
                 {
                     Console.WriteLine("Invalid choice, try again. You need to type exacly in a way its displayed (ex. A2)");
                     chosenMove = Console.ReadLine();
 
-                    if (chosenMove.Length != 2)
-                    {
-                        continue;
-                    }
-
                     choseRow = 8 - (chosenMove[1] - '0');
-                    choseCol = chosenMove[0] - 'A';
+                    choseCol = char.ToUpper(chosenMove[0]) - 'A';
                 }
                 MovePiece(pos, choseRow, choseCol, Board);
+
+                IsWhiteTurn = !IsWhiteTurn;
 
                 if (IsCheckmate(IsWhiteTurn, Board))
                 {
@@ -247,7 +301,7 @@ namespace Chess
                     continue;
                 }
 
-                IsWhiteTurn = !IsWhiteTurn;
+                
             }
             
 
