@@ -27,7 +27,7 @@ namespace Chess.Pieces
                     if (!HasMoved)
                     {
                         int newRow2 = Row + 2 * dir;
-                        if (newRow2 >= 0 && newRow2 < 8)
+                        if (newRow2 >= 0 && newRow2 < 8 && board[newRow2, Col] == null)
                         {
                             possMoves.Add((newRow2, Col));
                         }

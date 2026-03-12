@@ -7,12 +7,24 @@
       "RelativeMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|solutionrelative:chess\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|c:\\users\\wiktoria\\desktop\\moje\\szkola\\klasa 4\\zarzadzanie projektem\\chess\\chess\\pieces\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|c:\\users\\wiktoria\\desktop\\moje\\szkola\\klasa 4\\zarzadzanie projektem\\chess\\chess\\pieces\\pawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\pawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|c:\\users\\wiktoria\\desktop\\moje\\szkola\\klasa 4\\zarzadzanie projektem\\chess\\chess\\movemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|solutionrelative:chess\\movemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|c:\\users\\wiktoria\\desktop\\moje\\szkola\\klasa 4\\zarzadzanie projektem\\chess\\chess\\gamerules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|solutionrelative:chess\\gamerules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|c:\\users\\wiktoria\\desktop\\moje\\szkola\\klasa 4\\zarzadzanie projektem\\chess\\chess\\boardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|solutionrelative:chess\\boardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|c:\\users\\wiktoria\\desktop\\moje\\szkola\\klasa 4\\zarzadzanie projektem\\chess\\chess\\pieces\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDA467D-12E0-44A5-8459-985BA4579A70}|Chess\\Chess.csproj|solutionrelative:chess\\pieces\\piece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +34,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "GameRules.cs",
+              "DocumentMoniker": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\GameRules.cs",
+              "RelativeDocumentMoniker": "Chess\\GameRules.cs",
+              "ToolTip": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\GameRules.cs",
+              "RelativeToolTip": "Chess\\GameRules.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAwIQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:00:42.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MoveManager.cs",
+              "DocumentMoniker": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\MoveManager.cs",
+              "RelativeDocumentMoniker": "Chess\\MoveManager.cs",
+              "ToolTip": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\MoveManager.cs",
+              "RelativeToolTip": "Chess\\MoveManager.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAowAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:59:42.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BoardManager.cs",
+              "DocumentMoniker": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\BoardManager.cs",
+              "RelativeDocumentMoniker": "Chess\\BoardManager.cs",
+              "ToolTip": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\BoardManager.cs",
+              "RelativeToolTip": "Chess\\BoardManager.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowD8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T13:57:55.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Piece.cs",
               "DocumentMoniker": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\Pieces\\Piece.cs",
               "RelativeDocumentMoniker": "Chess\\Pieces\\Piece.cs",
@@ -34,18 +85,17 @@
               "RelativeToolTip": "Chess\\Pieces\\Piece.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAuwDgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T11:41:23.146Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-12T11:41:23.146Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Pawn.cs",
               "DocumentMoniker": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\Pieces\\Pawn.cs",
               "RelativeDocumentMoniker": "Chess\\Pieces\\Pawn.cs",
               "ToolTip": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\Pieces\\Pawn.cs",
               "RelativeToolTip": "Chess\\Pieces\\Pawn.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAowB8AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-12T12:41:35.346Z",
               "EditorCaption": ""
@@ -58,7 +108,7 @@
               "RelativeDocumentMoniker": "Chess\\Program.cs",
               "ToolTip": "C:\\Users\\Wiktoria\\Desktop\\moje\\szkola\\klasa 4\\Zarzadzanie projektem\\Chess\\Chess\\Program.cs",
               "RelativeToolTip": "Chess\\Program.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAwC8BAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-10T13:50:59.519Z",
               "EditorCaption": ""
