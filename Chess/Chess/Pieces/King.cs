@@ -38,6 +38,18 @@ namespace Chess.Pieces
                     }
                 }
             }
+            if (!HasMoved)
+            {
+                if (board[Row, Col + 1] == null && board[Row, Col + 2] == null && board[Row, Col + 3] is Rook rook1 && !rook1.HasMoved)
+                {
+                    possMoves.Add((Row, Col + 2));
+                }
+
+                if (board[Row, Col - 1] == null && board[Row, Col - 2] == null && board[Row, Col - 3] == null && board[Row, Col - 4] is Rook rook2 && !rook2.HasMoved)
+                {
+                    possMoves.Add((Row, Col - 2));
+                }
+            }
             return possMoves;
         }
     }

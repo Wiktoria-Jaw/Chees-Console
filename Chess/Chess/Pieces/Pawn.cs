@@ -44,6 +44,19 @@ namespace Chess.Pieces
                     possMoves.Add((newRow, Col + 1));
                 }
             }
+            if (Program.lastPawnMove != null)
+            {  
+                var ((fromRow, fromCol),(toRow,toCol)) = Program.lastPawnMove.Value;
+
+                if (board[toRow, toCol] is Pawn lastPawn &&  lastPawn.IsWhite != IsWhite &&
+                    Math.Abs(toRow-fromRow)== 2 &&
+                    Row == toRow &&
+                    Math.Abs(Col-toCol)==1)
+                {
+                    int captureRow = IsWhite ? Row - 1 : Row + 1;
+                    possMoves.Add((captureRow, toCol));
+                }
+            }
             return possMoves;
         }
     }

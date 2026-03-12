@@ -120,7 +120,7 @@ namespace Chess
                     if (p != null && p.IsWhite == isWhiteTurn)
                     {
                         var moves = p.GetMoves(board);
-                        var legalMoves = GetLegalMoves(board, p, moves);
+                        var legalMoves = MoveManager.GetLegalMoves(board, p, moves);
 
                         if (legalMoves.Count > 0)
                         {
