@@ -29,17 +29,7 @@ namespace Chess
 
             Piece currPiece = board[row, col];
 
-            if (currPiece == null)
-            {
-                return false;
-            }
-
-            if (currPiece.IsWhite != isWhiteTurn)
-            {
-                return false;
-            }
-
-            if (currPiece.GetMoves(board).Count == 0)
+            if (currPiece == null || currPiece.IsWhite != isWhiteTurn || currPiece.GetMoves(board).Count == 0)
             {
                 return false;
             }
@@ -47,20 +37,18 @@ namespace Chess
         }
         public static Piece FindKing(bool isWhiteTurn, Piece[,] board)
         {
-            Piece king = null;
             for (int r = 0; r < 8; r++)
             {
                 for (int c = 0; c < 8; c++)
                 {
                     Piece p = board[r, c];
-                    if (p != null && p is King && p.IsWhite == isWhiteTurn)
+                    if (p is King && p.IsWhite == isWhiteTurn)
                     {
-                        king = p;
-                        return king;
+                        return p;
                     }
                 }
             }
-            return king;
+            return null;
         }
         public static bool IsCheck(bool isWhiteTurn, Piece[,] board)
         {
@@ -73,8 +61,7 @@ namespace Chess
             {
                 if (p != null && p.IsWhite != isWhiteTurn)
                 {
-                    List<(int, int)> possMoves = p.GetMoves(board);
-                    if (possMoves.Contains((kingRow, kingCol)))
+                    if (p.GetMoves(board).Contains((kingRow, kingCol)))
                     {
                         return true;
                     }
@@ -93,8 +80,7 @@ namespace Chess
                     Piece p = board[r, c];
                     if (p != null && p.IsWhite == isWhiteTurn)
                     {
-                        List<(int, int)> possMoves = p.GetMoves(board);
-                        foreach (var move in possMoves)
+                        foreach (var move in p.GetMoves(board))
                         {
                             Piece[,] copyBoard = (Piece[,])board.Clone();
 
@@ -119,8 +105,7 @@ namespace Chess
                     Piece p = board[r, c];
                     if (p != null && p.IsWhite == isWhiteTurn)
                     {
-                        var moves = p.GetMoves(board);
-                        var legalMoves = MoveManager.GetLegalMoves(board, p, moves);
+                        var legalMoves = MoveManager.GetLegalMoves(board, p, p.GetMoves(board));
 
                         if (legalMoves.Count > 0)
                         {
